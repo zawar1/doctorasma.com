@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Doctor Asma | DVM</title>
+<meta name="description" content="Doctor Asma: vlogs from vet school at Riphah, Lahore. Final semester DVM life, animals, professors and classmates.">
+<link rel="icon" href="assets/favicon.png"><link rel="stylesheet" href="style.css">
+<meta property="og:title" content="Doctor Asma | DVM"><meta property="og:image" content="https://doctorasma.com/assets/logo.png">
+</head><body>
+<header><div class="wrap">
+<img src="assets/logo.png" alt="Doctor Asma logo">
+<h1>Doctor Asma</h1>
+<p>Back to university, and into vet school. Daily vlogs from my final semester of DVM at Riphah, Lahore: animals, surgeries, field trips, professors and the best classmates.</p>
+<a class="btn" href="https://www.youtube.com/@DoctorAsma?sub_confirmation=1">Subscribe on YouTube</a>
+<a class="btn alt" href="https://www.youtube.com/@DoctorAsma/videos">Watch the vlogs</a>
+</div></header>
+<main class="wrap">
+<section id="latest"><h2>Latest videos</h2><div class="grid" id="videos"><p>See all videos on <a href="https://www.youtube.com/@DoctorAsma">youtube.com/@DoctorAsma</a>.</p></div></section>
+<section><h2>Follow</h2>
+<p><a href="https://www.youtube.com/@DoctorAsma">YouTube @DoctorAsma</a> · <a href="https://www.tiktok.com/@_.asma9179">TikTok</a> · <a href="https://www.instagram.com/doctorasma0">Instagram</a></p></section>
+</main>
+<footer class="wrap">© Doctor Asma · <a href="privacy.html">Privacy policy</a></footer>
+<script>
+fetch('videos.json').then(r=>r.ok?r.json():[]).then(v=>{if(!v.length)return;const g=document.getElementById('videos');g.innerHTML='';
+v.slice(0,12).forEach(x=>{const a=document.createElement('a');a.className='card';a.href=x.url;
+const i=document.createElement('img');i.loading='lazy';i.alt='';i.src='https://i.ytimg.com/vi/'+x.id+'/hqdefault.jpg';
+const d=document.createElement('div');d.textContent=x.title;a.append(i,d);g.append(a)})}).catch(()=>{});
+</script>
+</body></html>
